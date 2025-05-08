@@ -1,5 +1,6 @@
 public class discos
 {
+    public string nombre { get; private set; }
 public string artista { get; private set; }
 public string productor{ get; private set; }
 public string generoMusical{ get; private set; }
@@ -8,8 +9,9 @@ public int ID { get; private set; }
 public string foto { get; private set; }
 
 
-public discos(string artista, string productor, string generoMusical, List<string> temas, int ID, string foto)
+public discos(string nombre ,string artista, string productor, string generoMusical, List<string> temas, int ID, string foto)
 {
+    this.nombre = nombre;
         this.artista = artista;
         this.productor = productor;
         this.generoMusical = generoMusical;
