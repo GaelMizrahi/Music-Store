@@ -1,0 +1,9 @@
+<ul>
+ <img src="@ViewBag.album.foto" alt="Foto de @ViewBag.album.nombre" width="200" height="auto" />
+@foreach (string tema in ViewBag.album.temas)
+{
+    <li>
+        @tema
+    </li>
+}
+</ul>
