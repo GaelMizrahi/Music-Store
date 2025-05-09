@@ -1,4 +1,4 @@
-public static class Grupo
+public static class infoDiscos
 {
     public static Dictionary<int, discos> albumes { get; private set; } = new Dictionary<int, discos>();
 

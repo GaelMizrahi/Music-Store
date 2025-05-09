@@ -14,22 +14,21 @@ public class HomeController : Controller
     }
 
     
-  public IActionResult Index()
-        {
-            discos.infoDiscos(); // Asegúrate de inicializar una sola vez en una app real
-            ViewBag.discos = discos.canciones();
-            return View(discos);
-
-        }
+public IActionResult Index()
+{
+    infoDiscos.InicializarGrupo();  
+    ViewBag.discos = infoDiscos.albumes; 
+    return View();
+}
     public IActionResult InformacionDisco(int id)
         {
-            if (Grupo.albumes.ContainsKey(id))
+            if (infoDiscos.albumes.ContainsKey(id))
             {
-                ViewBag.albumes = Grupo.albumes[id];
+                ViewBag.album = infoDiscos.albumes[id];
               
             }
 
-             return View("InformacionDisco",id);
+             return View("InformacionDisco");
         }
    
     }
