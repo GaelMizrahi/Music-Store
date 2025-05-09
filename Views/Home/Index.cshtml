@@ -1,8 +1,32 @@
 ﻿@{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "GIF";
 }
 
-<div>
-    <h1>Index</h1>
-    <p>Bienvenidos al sitio web de NombreProyecto</p>
-</div>
+
+
+</section>
+    <h1>GIF</h1>
+    <p>Bienvenidos al sitio web de "GIF" el cual aprenderemos de musica</p>
+</section>
+
+<section>
+    <div>
+                 
+    
+        
+            @foreach (discos albumes in ViewBag.discos.Values)
+            {
+               
+                <div>
+                    <img src="@albumes.foto" alt="Foto de @albumes.nombre" width="200" height="auto" />
+                    <h1> @albumes.nombre </h1>
+                    <h3> Artista: @albumes.artista </h3>
+                     <h3> Productor: @albumes.productor </h3>
+                     <h3> Genero musical: @albumes.generoMusical </h3>
+                    <a href='@Url.Action("InformacionDisco", "Home", new { id = albumes.ID })'>Información disco</a>
+
+                   </div>
+            }
+      
+        </div>
+</section>
