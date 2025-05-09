@@ -20,7 +20,7 @@ public IActionResult Index()
     ViewBag.discos = infoDiscos.albumes; 
     return View();
 }
-    public IActionResult InformacionDisco(int id)
+public IActionResult InformacionDisco(int id)
         {
             if (infoDiscos.albumes.ContainsKey(id))
             {
@@ -30,6 +30,7 @@ public IActionResult Index()
 
              return View("InformacionDisco");
         }
+   
    
     }
 
