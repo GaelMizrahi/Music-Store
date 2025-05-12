@@ -13,6 +13,19 @@ body {
   margin: 10px;
   padding: 10px;
 }
+section div{
+  width: 50%;
+  height: auto;
+  margin: 1%;
+  margin-left: 25%;
+  margin-right: 25%;
+  border: 1px solid black;
+  border-radius: 10px;
+  float: left;
+  background-color: cadetblue;
+}
+
+
 
 
 footer {
